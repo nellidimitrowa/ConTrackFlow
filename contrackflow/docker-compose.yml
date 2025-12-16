@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:8.1
+    container_name: contrackflow-db
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: contrackflow
+    ports:
+      - "3306:3306"
+    volumes:
+      - contrackflow-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  contrackflow-data:
