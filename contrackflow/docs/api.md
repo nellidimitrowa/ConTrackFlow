@@ -59,3 +59,14 @@ GET /contracts/{id}/comments
 <h2>Audit Logs</h2>
 
 GET /audit
+
+[//]: # (TODO: add request/response body examples)
+
+[//]: # ()
+[//]: # (HTTP status codes)
+
+[//]: # ()
+[//]: # (Error scenarios)
+
+[//]: # ()
+[//]: # (Authentication requirements per endpoint)
